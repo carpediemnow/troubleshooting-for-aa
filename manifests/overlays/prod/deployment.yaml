@@ -24,9 +24,9 @@ spec:
       #   persistentVolumeClaim:
       #     claimName: cepg-aa-std-pvc
       # - name: application-properties
-      configMap:
-        name: cloud-sample-configmap
-        items:
-          - key: application.yml
-            path: application.yml
-        defaultMode: 420
+      #   configMap:
+      #     name: cloud-sample-configmap
+      #     items:
+      #       - key: application.yml
+      #         path: application.yml
+      #     defaultMode: 420
