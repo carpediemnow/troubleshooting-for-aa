@@ -9,7 +9,7 @@ spec:
       containers:
         - name: troubleshooting 
           command: ["java","-jar","/app.jar"]
-          args: ["--spring.config.location=file:/config/application.yml"]
+          # args: ["--spring.config.location=file:/config/application.yml"]
           # volumeMounts:
           # - mountPath: /mnt/cloud-sample
           #   name: cloud-sample-volume
