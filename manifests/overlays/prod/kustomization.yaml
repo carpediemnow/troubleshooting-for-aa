@@ -4,7 +4,7 @@ configMapGenerator:
   name: troubleshooting-configmap
 resources:
 - ../../base
-- pvc.yaml
+# - pvc.yaml
 patchesStrategicMerge:
 - deployment.yaml
 - ingress.yaml

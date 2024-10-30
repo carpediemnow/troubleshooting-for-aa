@@ -10,23 +10,23 @@ spec:
         - name: troubleshooting 
           command: ["java","-jar","/app.jar"]
           args: ["--spring.config.location=file:/config/application.yml"]
-          volumeMounts:
-          - mountPath: /mnt/cloud-sample
-            name: cloud-sample-volume
-            readOnly: false
-            subPath: cloud-sample
-          - mountPath: /config
-            name: application-properties
-            readOnly: true
+          # volumeMounts:
+          # - mountPath: /mnt/cloud-sample
+          #   name: cloud-sample-volume
+          #   readOnly: false
+          #   subPath: cloud-sample
+          # - mountPath: /config
+          #   name: application-properties
+          #   readOnly: true
                           
-      volumes:
-      - name: cloud-sample-volume
-        persistentVolumeClaim:
-          claimName: cepg-aa-std-pvc
-      - name: application-properties
-        configMap:
-          name: cloud-sample-configmap
-          items:
-            - key: application.yml
-              path: application.yml
-          defaultMode: 420
+      # volumes:
+      # - name: cloud-sample-volume
+      #   persistentVolumeClaim:
+      #     claimName: cepg-aa-std-pvc
+      # - name: application-properties
+      configMap:
+        name: cloud-sample-configmap
+        items:
+          - key: application.yml
+            path: application.yml
+        defaultMode: 420
